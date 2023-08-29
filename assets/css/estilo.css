@@ -1,9 +1,173 @@
 * {
     margin: 0px;
     box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    flex: 1;
 }
 
 
-img {
-    width: 40px;
+/*INFORMAÇOES BARRA INÍCIO*/
+
+.informacoes,
+.informacoes a {
+    display: flex;
+    align-items: center;
+    background-color: #ff0000;
+    color: #fff;
+    justify-content: flex-end;
+    text-decoration: none;
 }
+.informacoes div {
+    margin-right: 20px;
+}
+
+.whatsapp--bottao img{
+    width: 30px;
+}
+
+.whatsapp--bottao a img {
+    margin-right:5px;
+}
+/*INFORMAÇOES BARRA FIM*/
+
+
+
+
+
+
+/*LOGO AREA INÍCIO*/
+.head-logo {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+/*.ÁREA DA LOGO DENTRO DE HEADER*/
+.logo-area  {
+    display: flex;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/*.CONTROLE É PARA CENTRALIZAR MEU INPUT*/
+.head-logo .controle {
+    background-color: #ddd;
+    width: 100%;
+}
+
+.input--head {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+/*.FIM AREA DO INPUT*/
+
+
+.logo-area  {
+    
+    background-color: #ccc;
+    color: #fff;
+    border-color: #fff;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+
+}   
+
+
+/*LOGO AREA FIM*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*INÍNIO BARRA LATERAL*/
+
+
+.barra--produtos--lateral a{
+    text-decoration: none;
+    display: block;
+    color: #000;
+    margin-right: 30px;
+
+}
+
+
+.barra--produtos--lateral .titulo--produto {
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 5px;
+}
+.produtos--lateral .titulo--produto:first-of-type {
+    margin-top: 20px;
+}
+.ul--lateral li a{
+    margin-bottom: 5px;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: inherit;
+}
+
+.ul--lateral
+.ul--lateral{
+    margin-bottom: 5px;
+}
+
+
+/*CONTROLE BARRA LATERAL*/
+
+
+.barra--produtos--lateral ul li {
+    list-style: none;
+    display: block;
+
+
+}
+
+.container {
+    display: flex;
+}
+
+.produtos--big {
+    flex: 1;
+
+}
+.produtos--big  img{
+    width:200px ;
+
+}
+
+.ul--lateral {
+    display: none;
+}
+
+
+
+/*PRODUTOS*/
