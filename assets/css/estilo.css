@@ -1,31 +1,68 @@
 * {
     margin: 0px;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica;
 
 }
-body {
-    background-color: #F0F8FF;
-}
+
 /*INÍCIO BARRA DE CONTATO*/
 .container-contatos{
     width: 100vw;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr ;
+    grid-template-columns: 250PX 1fr 1fr ;
+    text-align: center;
+    background-color: #F5F5DC;
     text-align: center;
 }
 
 .column-contact1 {
-    
+
+
+}
+.column-contact1 img,
+.column-contact2 img {
+    width: 30px;
 }
 
-.column-contact2 {
-    
+.column-contact1  a{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.column-contact2,
+.column-endereco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column-contact2 a{
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .column-endereco {
-    
+
 }
+.column-endereco img {
+    width: 15px;
+
+}
+
+.column-endereco a {
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*FIM BARRA DE CONTATO*/
 
 
@@ -39,7 +76,7 @@ body {
     display: grid;
     grid-template-columns: 100px 1fr 50px;
     grid-template-rows: 100px;
-    background-color: #DEB887;
+    background-color: #F5F5DC;
     
 }
 
