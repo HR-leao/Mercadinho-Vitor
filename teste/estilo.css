@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font: 100%/1.4 Mulish, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+nav {
+    max-width: 10em;
+}
+
+nav ul {
+    list-style: none;
+}
+
+li {
+    position: relative;
+}
+
+li:hover {
+    background: #eee;
+}
+
+li :is(span, a) {
+    display: block;
+    border: 1px solid #bbb;
+    padding: 1em;
+}
+
+li>ul {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+li:hover>ul {
+    display: block;
+}
