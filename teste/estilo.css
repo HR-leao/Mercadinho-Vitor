@@ -15,10 +15,12 @@ a {
 
 nav {
     max-width: 10em;
+    
 }
 
 nav ul {
     list-style: none;
+    
 }
 
 li {
