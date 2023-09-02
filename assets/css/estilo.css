@@ -161,6 +161,7 @@ nav>ul {
 .nav-sidebar-left {
     max-width: 10em;    
     margin-left: 10px;
+    max-height: 309px;
 }
 
 h3 {
@@ -253,3 +254,15 @@ footer{
 }
 
 /*FIM CONFIGURANDO SIDEBAR*/
+
+
+.container-principal {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+}
+
+.div-produtos {
+    height: 100vh;
+    background-color: pink;
+}
