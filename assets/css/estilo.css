@@ -11,7 +11,7 @@ body {
     font-family: 'PT Serif', serif;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+    overflow: hidden;
     
 }
 
@@ -136,17 +136,12 @@ address {
 /*FIM CONFIGURAÇÕES DO CARRINHO*/
 
 
-.container-baner{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    background-image: url(/assets/images/banner.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 290px;
-}
+/*INÍCIO CONFIGURANDO SLIDER*/
 
+
+
+
+/*FIM CONFIGURANDO SLIDER*/
 
 /*INÍCIO CONFIGURANDO SIDEBAR*/
 nav {
