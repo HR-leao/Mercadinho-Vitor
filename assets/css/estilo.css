@@ -11,7 +11,7 @@ body {
     font-family: 'PT Serif', serif;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+
     
 }
 
@@ -138,9 +138,88 @@ address {
 
 /*INÍCIO CONFIGURANDO SLIDER*/
 
+.container-slider {
+   
+overflow: hidden;
+
+}
+.slides {
+    width: 400%;
+    display: flex;
+    
+}
+.slides input {
+    display: none;
+}
+.slide {
+    background-repeat: no-repeat;
+    height: 300px;
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+}
+
+.manual-navegation {
+    width: calc(100%);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 280px;
+    
+}
+
+.manual-btn {
+    border: 2px solid #fff;
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
 
 
+.manual-btn:hover {
+    background-color: #FFF;
+}
 
+.active{
+    background-color: red;
+}
+#radio1:checked ~.first{
+    margin-left: 0px;
+}
+
+#radio2:checked ~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked ~.first {
+    margin-left: -50%;
+}
+
+.navegation-auto div {
+    border: 2.5px solid #FFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navegation-auto {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: calc(46.3%);
+    display: flex;
+    justify-content: center;
+    height: 10px;
+}
+.navegation-auto div {
+    margin-right: 30px;
+}
 /*FIM CONFIGURANDO SLIDER*/
 
 /*INÍCIO CONFIGURANDO SIDEBAR*/
