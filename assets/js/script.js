@@ -1,16 +1,12 @@
-let radios = document.querySelectorAll('.radios').forEach((e)=>{
+
+document.querySelectorAll('.manual-btn').forEach((e)=>{
     e.addEventListener('click', ()=>{
-        if(e.checked) {
-            mudaCor(e)
-        }
+    // Remover a classe 'active' de todos os elementos com a mesma classe
+        document.querySelectorAll('.manual-btn').forEach((ele)=>{
+        ele.classList.remove('active');
+        });
+    // Adicionar a classe 'active' ao elemento clicado
+        e.classList.add('active')
     })
+
 })
-
-
-function mudaCor(p){
-    document.querySelectorAll('.manual-btn').forEach((e) =>{
-        console.log(e.target)
-    })
-}   
-
-mudaCor()
