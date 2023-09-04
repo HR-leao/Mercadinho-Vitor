@@ -199,7 +199,8 @@ overflow: hidden;
     margin-left: -25%;
 }
 
-#radio3:checked ~.first {
+#radio3:checked ~.first { /*OPERADOR IRMÃO (~)ELE SELECIONA TODOS OS ELEMENTOS DEPOIS DO ITEM QUE VOCÊ SETOU
+    E ADICIONA AS CONFIGURAÇÕES QUE VOCÊ QUER*/
     margin-left: -50%;
 }
 
