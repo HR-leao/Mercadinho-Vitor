@@ -18,7 +18,7 @@ body {
 address {
     top: 0;
     font-style: normal;
-    position: fixed;
+    
 }
 /*INÍCIO BARRA DE CONTATO*/
 .container-contatos{
@@ -166,7 +166,8 @@ overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 280px;
+    margin-top: 311px;
+    margin-left: 1px;
     
 }
 
