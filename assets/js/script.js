@@ -8,32 +8,24 @@ document.querySelectorAll('.manual-btn').forEach((e)=>{
     // Adicionar a classe 'active' ao elemento clicado
         e.classList.add('active')
     })
-
+    
 })
 //___________________________________________________________________________________________________
-let radios = document.querySelectorAll('.slides .radios')
-let teste = document.querySelector('.slide.first')
-let valor = 0;
+
+let count = 1;
+document.querySelector('#radio1').checked = true;
+
+setInterval(function() {
+    nextImage()
+}, 3000)
 
 
-
-function testeq () {
-    if(valor === 0){
-        setTimeout(function(){
-            teste.style.marginLeft="-25%";
-            valor++;
-            console.log(valor);
-            testeq();
-        },3000)
-    }if(valor===1){
-        setTimeout(function(){
-            teste.style.marginLeft="-50%";
-            valor++
-            console.log(valor);
-            testeq();
-        },3000)
+function nextImage() {
+    count++;
+    if(count > 3) {
+        count =1;
     }
-}
 
-testeq()
-setInterval(testeq,4000)
+    let v = document.querySelector('#radio'+count).checked = true;
+    
+}
