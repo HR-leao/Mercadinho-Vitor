@@ -139,8 +139,7 @@ address {
 /*INÍCIO CONFIGURANDO SLIDER*/
 
 .container-slider {
-   
-overflow: hidden;
+    overflow: hidden;
 
 }
 .slides {
@@ -219,7 +218,10 @@ overflow: hidden;
     display: flex;
     justify-content: center;
     height: 10px;
+    
 }
+
+
 .navegation-auto div {
     margin-right: 30px;
 }
