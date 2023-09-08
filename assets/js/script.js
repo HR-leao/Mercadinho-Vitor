@@ -23,20 +23,6 @@ let radio = document.getElementById('radio1')
 let radio2 = document.getElementById('radio2')
 let radio3 = document.getElementById('radio3')
 
-/*PARA PASSAR O VALOR DA data-valor PARA INTEIRO TEM QUE CRIAR UMA VARIÁVEL PARA GUARDAR O VALOR INTEIRO, NO CASO A NOVA VERSÃO DO ATRIBUTO */
-let vlKey1 = radio.getAttribute('data-valor')
-let vlKeyInt = parseInt(vlKey1)
-
-let vlKey2 = radio2.getAttribute('data-valor')
-let rdKey2Int = parseInt(vlKey2)
-
-
-let vlKey3 = radio3.getAttribute('data-valor')
-let vlKey3Int = parseInt(vlKey3)
-
-
-console.log(vlKeyInt,rdKey2Int, vlKey3Int)
-
 
 
 /*SELEÇÃO DOS BOTÕES AUTOMÁTICOS DO SLIDE */
@@ -45,16 +31,19 @@ let auto2 = document.querySelector('.auto-btn2')
 let auto3 = document.querySelector('.auto-btn3')
 
 
-
 /*VARIÁVEL tet ESTÁ SERVINDO PARA CRIAR UMA FUNÇÃO DE CLICK QUE IRA REMOVER A CLASS ACTIVE DE TODOS OS BOTÕES DO SLIDE */
-let tet = document.querySelectorAll('.manual-btn')
-let radios = document.querySelectorAll('.radios')
+let mnBotao = document.querySelectorAll('.manual-btn')
+
+
+let radios = document.getElementsByClassName('.radios')
 
 
 
 
-tet.forEach((e)=>{
+mnBotao.forEach((e)=>{
     e.addEventListener('click', ()=>{
+
+        let t = e.getAttribute('data-valor')
         if(e){
              auto3.classList.remove('active')
              auto2.classList.remove('active')
@@ -63,12 +52,19 @@ tet.forEach((e)=>{
                 e.classList.remove('active')
              },1000)
         }
-        if(radio){
-            console.log('uagsvbduasb')
+        if(t === '1') {
+            count = 1;
+        }
+        if(t === '2'){
+            count = 2;
+        }
+        if(t === '3'){
+            count = 3;
         }
     })
 
 })
+
 
 
 
@@ -81,25 +77,25 @@ function teste () {
         if(count === 1){
         auto1.classList.add('active')
         auto3.classList.remove('active')
-             console.log("primeiro interval")
+        console.log(count)
     }
-        },1000)
+        },2000)
     
     setInterval(function(){
         if(count === 2){
         auto1.classList.remove('active')
         auto2.classList.add('active')
-        console.log("SEGUNDO interval")
+        console.log(count)
         
     }
-    },1000)
+    },2000)
     setInterval(function(){
         if(count=== 3) {
         auto2.classList.remove('active')
         auto3.classList.add('active')
-       console.log("TERCEIRO interval")
+       console.log(count)
     }
-    },1000)
+    },2000)
 }
 
 teste()
