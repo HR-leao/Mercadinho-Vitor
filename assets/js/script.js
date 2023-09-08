@@ -39,7 +39,7 @@ let radios = document.getElementsByClassName('.radios')
 
 
 
-
+/*AO CLICAR NO BOTÃO MANUAL ELE REMOVE A CLASS ACTIV */
 mnBotao.forEach((e)=>{
     e.addEventListener('click', ()=>{
 
@@ -69,8 +69,8 @@ mnBotao.forEach((e)=>{
 
 
 
-
-function teste () {
+/*REMOVE A CLASSE ACTIVE E ADICONA NO RADIUS QUE FOI CLICADO*/
+function poeActive () {
     
     
         setInterval(function(){
@@ -79,7 +79,7 @@ function teste () {
         auto3.classList.remove('active')
         console.log(count)
     }
-        },2000)
+        },1000)
     
     setInterval(function(){
         if(count === 2){
@@ -88,25 +88,25 @@ function teste () {
         console.log(count)
         
     }
-    },2000)
+    },1000)
     setInterval(function(){
         if(count=== 3) {
         auto2.classList.remove('active')
         auto3.classList.add('active')
-       console.log(count)
+        console.log(count)
     }
-    },2000)
+    },1000)
 }
 
-teste()
+poeActive()
 setInterval(function(){
-    teste()
+    poeActive()
 },1000)
 
 setInterval(function() {
     nextImage()
     
-}, 3000)
+}, 5000)
 
 
 function nextImage() {
