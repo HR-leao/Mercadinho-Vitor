@@ -11,6 +11,8 @@
 body {
     font-family: 'PT Serif', serif;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 address {
@@ -29,9 +31,8 @@ address {
     font-size: 11px;
 }
 
-.column-contact1 {
-
-
+.column {
+    width:100%;
 }
 .column-contact1 img,
 .column-contact2 img {
@@ -316,25 +317,21 @@ ul>li {
 }
 
 footer{
-    margin-bottom: 100px;
+    
     background-color: red;
 }
 
 /*FIM CONFIGURANDO SIDEBAR*/
 
 
+
 .container-principal {
     display: grid;
+    flex: 1 1 0;
     grid-template-columns: 1fr 4fr;
 
 }
 
-.div-produtos {
-    height: auto;
-    display: flex;
-    background-color: pink;
-
-}
 
 
 .produto img {
@@ -355,7 +352,7 @@ footer{
 .column{
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
+    
     background-color: rebeccapurple;
     margin-right: 10px;
     flex: 1;
