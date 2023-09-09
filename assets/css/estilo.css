@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
 
 * {
     margin: 0px;
     box-sizing:border-box;
-
+    
 
 }
+
+
 body {
     font-family: 'PT Serif', serif;
-    display: flex;
-    flex-direction: column;
-
-    
+    overflow-x: hidden;
 }
 
 address {
@@ -22,7 +20,7 @@ address {
 }
 /*INÍCIO BARRA DE CONTATO*/
 .container-contatos{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     text-align: center;
@@ -89,7 +87,7 @@ address {
     align-items: center;
     text-align: center;
     background-color: #1a8ac8;
-    
+    margin-top: -30px;
 }
 .div--pesquisa {
     display: flex;
@@ -97,10 +95,12 @@ address {
     align-items: flex-end;
     background-color:#1a8ac8;
     width: 100%;
+    margin-top: -30px;
 }
 .div--logo img {
     width: 100px;
     height: 100px;
+   
 }
 
 
@@ -138,70 +138,56 @@ address {
 
 /*INÍCIO CONFIGURANDO SLIDER*/
 
-.container-slider {
-    overflow: hidden;
 
-}
-.slides {
-    width: 400%;
-    display: flex;
-    
-}
-.slides input {
-    display: none;
-}
-.slide {
-    background-repeat: no-repeat;
-    height: 300px;
-    width: 25%;
-    background-size: cover;
-    background-position: center;
-    transition: 2s;
+.slid img {
+    width: 100%;
+    height: 400px;
 }
 
-.manual-navegation {
-    width: calc(100%);
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 311px;
-    margin-left: 1px;
-    
-}
-
-.manual-btn {
-    border: 2px solid #FFF;
+.slick-dots li {
+    background-color: #d49c00;
     border-radius: 100%;
-    padding: 5px;
-    cursor: pointer;
-    transition: 1s;
+    
+}
+.slick-dots li:hover {
+    background-color: #fff;
+    border-radius: 100%;
+
+}
+.slick-dots li button {
+    font-family: 'slick';
+    font-size: 40px;
+    line-height: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 230px;
+    height: 20px;
+    content: '•';
+    text-align: center;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.manual-btn:not(:last-child) {
-    margin-right: 30px;
+.slick-dots li button {
+    font-size: 0px;
+
+}
+.slick-dots li.slick-active button:before {/*BOLINHA CENTRO BOTAO*/
+    opacity: 1; /*COR BRANCA DA BOLINHA TOTAL*/
+    color: #FFF;
+    background-color: #fff;
+    border-radius: 100%;
 }
 
-
-.manual-btn:hover {
+.slick-dots li button:before {
     background-color: #FFF;
+    
+    color: #FFF;
+    border-radius: 100%;
 }
 
-.active{
-    background-color: #FFF;
-}
-#radio1:checked ~.first{
-    margin-left: 0px;
-}
-
-#radio2:checked ~.first {
-    margin-left: -25%;
-}
-
-#radio3:checked ~.first { /*OPERADOR IRMÃO (~)ELE SELECIONA TODOS OS ELEMENTOS DEPOIS DO ITEM QUE VOCÊ SETOU
-    E ADICIONA AS CONFIGURAÇÕES QUE VOCÊ QUER*/
-    margin-left: -50%;
-}
 
 .navegation-auto div {
     border: 2.5px solid #FFF;
