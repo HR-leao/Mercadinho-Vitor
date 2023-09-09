@@ -11,8 +11,7 @@
 body {
     font-family: 'PT Serif', serif;
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+
 }
 
 address {
@@ -87,18 +86,20 @@ address {
     color: #fff;
     align-items: center;
     text-align: center;
-    background-color: #1a8ac8;
-    margin-top: -30px;
+    margin-top: -32px;
+
 }
 .div--pesquisa {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    background-color:#1a8ac8;
     width: 100%;
-    margin-top: -30px;
+    position: relative;
+    margin-top: -32px;
+   
 }
 .div--logo img {
+    position: relative;
     width: 100px;
     height: 100px;
    
@@ -140,15 +141,26 @@ address {
 /*INÍCIO CONFIGURANDO SLIDER*/
 
 
-.slid img {
-    width: 100%;
-    height: 400px;
+
+.slides {
+    display: flex;
+    
 }
 
+.slid img  {
+    margin-top: 40px;
+    width: 100%;
+    height: 300px;
+    
+}
 .slick-dots li {
     background-color: #d49c00;
     border-radius: 100%;
     
+}
+
+.slick-dots {
+    margin-bottom: 22px;
 }
 .slick-dots li:hover {
     background-color: #fff;
@@ -184,7 +196,6 @@ address {
 
 .slick-dots li button:before {
     background-color: #FFF;
-    
     color: #FFF;
     border-radius: 100%;
 }
@@ -327,7 +338,7 @@ footer{
 
 .container-principal {
     display: grid;
-    flex: 1 1 0;
+
     grid-template-columns: 1fr 4fr;
 
 }
