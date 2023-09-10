@@ -42,10 +42,10 @@ $(document).ready(function () {
 
         vertical:true,
         autoplay: true,  // Ativar a reprodução automática
-        autoplaySpeed: 2000,  // Intervalo de tempo entre os slides (em milissegundos)
+        autoplaySpeed: 4000,  // Intervalo de tempo entre os slides (em milissegundos)
         dots: false,  // Mostrar indicadores de pontos
         infinite: true,  // Repetir o carrossel indefinidamente
-        speed: 500,  // Velocidade de transição (em milissegundos)
+        speed: 1000,  // Velocidade de transição (em milissegundos)
         fade: false,  // Ativar transições de fade
         cssEase: 'ease-in-out'  // Tipo de transição
     });
