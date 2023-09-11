@@ -74,19 +74,15 @@ address {
 /*INÍCIO CONFIGURAÇÕES LOGO, PESQUISA, CARRINHO*/
 
 .container-logo-pesquisa-carrinho {
-    display: grid;
-    grid-template-columns:1fr 2fr;
-    margin-bottom: 10px;
+    margin-top: -10px;
     
 }
 
 .div--logo {
     display: flex;
-    justify-content: center;
-    color: #fff;
-    align-items: center;
-    text-align: center;
-    margin-top: -32px;
+    justify-content: start;
+    background-color: #1a8ac8;
+    margin-top: 10px;
 
 }
 .div--pesquisa {
@@ -122,14 +118,14 @@ address {
 
 
 /*INÍCIO CONFIGURAÇÕES DO CARRINHO*/
-.div--carrinho {
+.div--menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
     display: none;
 }
 
-.b--carrinho {
+.b--menu {
     height: 4px;
     width: 20px;
     border-bottom: 2px solid #000;
@@ -244,7 +240,8 @@ nav>ul {
     max-width: 12em;
     min-height: 12em;    
     margin-left: 10px;
-    max-height: 309px;
+    max-height: 300px;
+    display: none;
 }
 
 h3 {
@@ -341,9 +338,7 @@ footer{
 
 
 .container-principal {
-    display: grid;
-
-    grid-template-columns: 1fr 4fr;
+    width: 100%;
 
 }
 
@@ -352,27 +347,97 @@ footer{
 .produto img {
     width: 100px;
 }
-.produto {
+.produto{
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 1;
-}
-.botao-item {
-    display: flex;
+    border: 5px solid blue;
+    margin-bottom: 10px;
+    margin-right: 10px;
 
 }
+
+
 
 
 .column{
     display: flex;
     flex-wrap: wrap;
-    
-    background-color: rebeccapurple;
     margin-right: 10px;
     flex: 1;
+    
 }
 
 .div-produtos:first-of-type{
     padding-left: 10px;
+}
+
+
+
+
+.cNav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*RESOLUÇÃO 720 X 1280*/
+
+@media(max-width:700px) and (max-height: 1280px){
+
+
+
+.slides img {
+    margin-top: 5px;
+    height: 100px;
+}
+
+.container-principal {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.div-produtos{
+    margin-top: 10px;
+}
+
+.nav-sidebar-left {
+    max-width: 12em;
+    min-height: 12em;
+    margin-left: 10px;
+    max-height: 300px;
+    display: none;
+}
+
+.div--menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 19px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+
+.b--menu {
+    height: 8px;
+    width: 40px;
+    border-bottom: 4px solid #000;
+
+}
+
+
+.div--logo img {
+    
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+}
+}
+
+.open {
+display: block;
 }

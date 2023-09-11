@@ -56,28 +56,18 @@ $(document).ready(function () {
 
 
 
+/*CONFIGURAÇÃO MENU-SANDUICHI APARECER DESAPARECER */
 
+let mnSanduIch = document.querySelector('.div--menu')
+let bLateral = document.querySelector('.nav-sidebar-left') 
 
+mnSanduIch.addEventListener('click', ()=>{
+    if(bLateral.classList.contains('open')){
+        bLateral.classList.remove('open')
+    }else {
+        bLateral.classList.add('open')
+    }
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*FIM CONFIGURAÇÃO MENU-SANDUICHI APARECER DESAPARECER */
 
