@@ -489,6 +489,6 @@ footer{
 @media (max-width:697px) {
         .div-produtos {
             margin-top: 42px;
-            max-width: 600px;
+            flex-wrap: wrap;
         }
 }
