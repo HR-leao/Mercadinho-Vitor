@@ -64,6 +64,7 @@ let bLateral = document.querySelector('.nav-sidebar-left')
 mnSanduIch.addEventListener('click', ()=>{
     if(bLateral.classList.contains('open')){
         bLateral.classList.remove('open')
+        console.log('CONTEM')
     }else {
         bLateral.classList.add('open')
     }
