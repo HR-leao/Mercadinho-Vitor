@@ -31,9 +31,7 @@ address {
     font-size: 11px;
 }
 
-.column {
-    width:100%;
-}
+
 .column-contact1 img{
     width: 26px;
     
@@ -91,6 +89,7 @@ address {
 
 .div-input-menu input {
     width: 50%;
+    max-width: 500px;
     border: 1px solid #008000;
     border-radius: 10px;
     margin-top: 5px;
@@ -367,6 +366,11 @@ ul>li {
 .produto img {
     width: 100px;
 }
+
+.div-produtos {
+    display: flex;
+    flex-wrap: wrap;
+}
 .produto{
     display: flex;
     flex-direction: column;
@@ -380,15 +384,7 @@ ul>li {
 
 
 
-.column{
-    min-width: 300px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-right: 10px;
 
-    
-}
 
 .cNav {
     display: flex;
@@ -396,6 +392,8 @@ ul>li {
     width: 350px;
     
 }
+
+
 
 
 
@@ -465,9 +463,6 @@ ul>li {
     display: block;
 }
 
-.column:first-child {
-    margin-left: 10px;
-}
 
 @media(max-width:375px) {
 
@@ -493,4 +488,12 @@ ul>li {
             margin-top: 42px;
             flex-wrap: wrap;
         }
+}
+
+@media(max-width:414px) {
+        .div-produtos img {
+            width: 60px;
+           
+        }
+        
 }
