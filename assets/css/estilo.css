@@ -81,10 +81,7 @@ address {
 
 /*INÍCIO CONFIGURAÇÕES LOGO, PESQUISA, CARRINHO*/
 
-.container-logo-pesquisa-carrinho {
-    margin-top: -10px;
-    
-}
+
 .div-input-menu {
    display: flex;
    justify-content: center;
@@ -108,7 +105,7 @@ input:focus{
     display: flex;
     justify-content: start;
     background-color: #1a8ac8;
-    margin-top: 10px;
+    
 
 }
 .div--pesquisa {
@@ -122,8 +119,8 @@ input:focus{
 }
 .div--logo img {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
    
 }
 
@@ -409,7 +406,7 @@ ul>li {
 
 
 .slides img {
-    margin-top: 5px;
+   
     height: 100px;
 }
 
