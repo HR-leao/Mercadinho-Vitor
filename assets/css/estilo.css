@@ -396,6 +396,7 @@ ul>li {
 .cNav {
     display: flex;
     flex-direction: column;
+    width: 350px;
     
 }
 
@@ -428,7 +429,8 @@ ul>li {
     width: 70px;
 }
 .nav-sidebar-left {
-    max-width: 12em;
+    
+    max-width: 14em;
     min-height: 12em;
     margin-left: 10px;
     max-height: 300px;
