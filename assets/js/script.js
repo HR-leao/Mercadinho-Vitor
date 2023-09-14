@@ -71,4 +71,40 @@ mnSanduIch.addEventListener('click', ()=>{
 })
 
 /*FIM CONFIGURAÇÃO MENU-SANDUICHI APARECER DESAPARECER */
+/*
+pizzaItem.setAttribute('data-key', index);
+pizzaItem.querySelector('.pizza-item--img img').src = item.img
+pizzaItem.querySelector('.pizza-item--name').innerHTML = item.name;
+pizzaItem.querySelector('.pizza-item--price').innerHTML = `RS ${item.price.toFixed(2)}`
+pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
+*/
+
+
+
+
+
+
+const c = (el) => document.querySelector(el); //FUNÇÃO PRA ABREVIAR O QUERYSELECTOR
+
+
+/*CLONANDO PRODUTOS */
+
+produtosJson.map((item, index)=>{
+    let proDuto = c('.produto').cloneNode(true)//CLONANDO O PRODUTO
+    proDuto.querySelector('.imgProd').src = item.img;
+    proDuto.querySelector('.titulo').innerHTML = item.name; //PEGANDO O NOME NO JSON E JOGANDO NO PRODUTO
+    proDuto.querySelector('.descricao').innerHTML = item.description//PEGANDO A DESCRIÇÃO NO JSON E JOGANDO NO PRODUTO
+    proDuto.querySelector('.valor').innerHTML = `R$ ${item.price.toFixed(2) }`//PEGANDO O VALOR DO PRODUTO NO JSON E JOGANDO NO PRODUTO
+    c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
+
+    
+    
+   
+    
+    
+});
+
+
+
+
 
