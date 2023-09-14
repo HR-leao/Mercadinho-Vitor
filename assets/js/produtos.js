@@ -1,10 +1,18 @@
 
 let produtosJson = [
-    { id: 1, name: 'Leite Glória', img: 'assets/images/piracanjuba.png', price: 7.50, size: ['1 Litro'], description: 'Leite Integral Glória'},
-    { id: 2, name: 'Leite Lg', img: 'assets/images/godam.png', price: 5.00, size: ['1 Litro'], description: 'Leite Integral Godam'},
-    { id: 3, name: 'Arroz Tio João', img: 'assets/images/tio-joao.png', price: 20.19, size: ['5kg', '1kg'], description: 'Arroz Tio João'},
-    { id: 4, name: 'Arroz Carreteiro', img: 'assets/images/carreteiro.png', price: 23.00, size: ['5kg', '1kg'], description: 'Arroz Carreteiro'},
-        
+    { id: 1, name: ' Cliper', img: '', price: 10, size: ['2L'], description:'Refrigerante Cliper' },
+    { id: 2, name: ' Grapete', img: '', price: 10, size: ['2L'], description: 'Refrigerante Grapete' },
+    { id: 3, name: ' Coca cola', img: '', price: 10, size: ['2L'], description: 'Refrigerante Coca Cola' },
+    { id: 4, name: ' Mineirinho', img: '', price: 10, size: ['2L'], description: 'Refrigerante Mineirinho' },
+    { id: 5, name: ' Kuat', img: '', price: 10, size: ['2L'], description: 'Refrigerante Kuat' },
+    { id: 6, name: ' Império', img: '', price: 10, size: [], description: 'Cerveja Império' },
+    { id: 7, name: ' Antártica', img: '', price: 10, size: [], description: 'Cerveja Antártica' },
+    { id: 8, name: ' Brama', img: '', price: 10, size: [], description: 'Cerveja Brama' },
+    { id: 9, name: ' Heineken', img: '', price: 10, size: [], description: 'Cerveja Heineken' },
+    { id: 10, name: ' Itaipava', img: '', price: 10, size: [], description: 'Cerveja Itaipava' },
+
+
+
 ]
 
 
