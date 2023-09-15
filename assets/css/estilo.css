@@ -546,8 +546,8 @@ ul>li {
 .div--logo img {
     
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
 
 }
 }
@@ -585,7 +585,7 @@ ul>li {
     
 .div--logo img {
     position: relative;
-    width: 90px;
+    width: 70px;
     height: 70px;
 }
 
@@ -600,10 +600,3 @@ ul>li {
 }
 
 
-@media(max-width:414px) {
-        .div-produtos img {
-            width: 60px;
-           
-        }
-        
-}
