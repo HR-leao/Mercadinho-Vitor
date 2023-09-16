@@ -96,6 +96,24 @@ produtosJson.map((item, index)=>{
     proDuto.querySelector('.descricao').innerHTML = item.description//PEGANDO A DESCRIÇÃO NO JSON E JOGANDO NO PRODUTO
     proDuto.querySelector('.valor').innerHTML = `R$ ${item.price.toFixed(2) }`//PEGANDO O VALOR DO PRODUTO NO JSON E JOGANDO NO PRODUTO
     proDuto.querySelector('.tamanho').innerHTML = item.size//PEGANDO O TAMANHO DO PRODUTO NO JSON E JOGANDO NO PRODUTO
+
+    proDuto.querySelector('.link-produto').addEventListener('click', (e)=>{
+        e.preventDefault();
+        console.log('clicou')
+    })
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
 
 });
