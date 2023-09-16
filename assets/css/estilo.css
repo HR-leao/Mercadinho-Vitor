@@ -42,7 +42,7 @@ address {
 
 .column-contact1 img{
     width: 26px;
-    
+    margin-right: 3px;
 }
 
 .column-contact1 {
@@ -615,7 +615,10 @@ ul>li {
 .produto img {
     height: 50px;
 }
-
+.column-endereco img {
+    margin-top: -5px;
+    margin-right: 3px;
+}
 .produto {
     height: 140px;
     width: 90px;
