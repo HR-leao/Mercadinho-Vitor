@@ -112,12 +112,12 @@ produtosJson.map((item, index)=>{
 
         c('.cancela-modal').addEventListener('click', () => {//FECHA O MODAL AO CLICAR NO BOTÃO CANCELA
             setTimeout(()=>{
-                c('.window-area-produtos').style.opacity = 0;
-                console.log('opacuit')
-            },200)
+                c('.window-area-produtos').style.opacity = 0; // ATRIBUINDO O VALOR 0 PARA OPACITE PARA FICAR INVISÍVEL
+                
+            },200)//ESPERA 200 MILISEGUNDOS PARA RETORNAR O CÓDIGO
             setTimeout(()=>{
-                c('.window-area-produtos').style.display = 'none'
-            },500)
+                c('.window-area-produtos').style.display = 'none'//RETIRANDO O MODAL POIS SE DEIXAR SOMENTE O OPACIT ELE VAI CONTINUAR NO LOCAL E NÃO VAI DAR PRA CLICAR EM OUTRO ITEM.
+            },500)//ESPERANDO 500 MILISEGUNDOS PARA RETORNAR O CÓDIGO
             
         })
 
