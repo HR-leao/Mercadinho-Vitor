@@ -616,6 +616,7 @@ ul>li {
 }
 
 .produto {
+    height: 140px;
     width: 90px;
     font-size: 11px;
 }
