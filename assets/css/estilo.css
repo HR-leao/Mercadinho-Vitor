@@ -460,7 +460,8 @@ ul>li {
 
 .carrinho {
     position: absolute;
-    margin-right: -500px;
+    margin-right: -540px;
+    margin-top: 5px;
     font-size: 19px;
     text-align: center;
     background-color: #1a8ac8;
