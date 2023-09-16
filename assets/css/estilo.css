@@ -115,13 +115,98 @@ address {
     box-shadow: 0px 0px 15px #999;
     display: flex;
     margin: 20px 0px;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.button-modal-mn,
+.button-modal-ms {
+    border:none;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.button-modal-ms {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
     
 }
 
-.prodQtd {
-    display: flex;
+.button-modal-mn {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+   cursor: pointer;
 }
 
+.button-modal-ms:hover {
+    background-color: #00FF7F;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button-modal-mn:hover {
+    background-color: #00FF7F;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.div-button-modal {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    width: 65px;
+    border-radius: 100%;
+}
+
+.text-preco-modal {
+    color: #EEE;
+    font-size: 17px;
+    font-family: 'PT Serif', serif;
+}
+.descricao-mod {
+    font-size: 15px;
+    font-family: 'PT Serif', serif;
+    color: #EEE;
+    margin-bottom: 20px;
+}
+.preco-button {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.cifrao{
+    font-size: 1.5em;
+}
+
+.add-car-remov-car {
+    display: flex;
+    align-items: center;
+    font-family: 'Lato', sans-serif;
+    
+}
+
+.add-modal-car {
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 10px;
+    color: #FFF;
+    font-family: 'Lato', sans-serif;
+    cursor: pointer;
+    background-color: #48d05f;
+}
+.cancela-modal:hover {
+    background-color: red;
+    color: #FFF;
+}
+.cancela-modal {
+    padding: 15px;
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
 /*FIM CONFIGURAÇÃO DO MODAL*/
 
 
@@ -384,7 +469,6 @@ ul>li {
     font-family: 'Poppins', sans-serif;
     
 }
-
 
 .produto-area {
     display: flex;
