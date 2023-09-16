@@ -96,11 +96,19 @@ produtosJson.map((item, index)=>{
     proDuto.querySelector('.descricao').innerHTML = item.description//PEGANDO A DESCRIÇÃO NO JSON E JOGANDO NO PRODUTO
     proDuto.querySelector('.valor').innerHTML = `R$ ${item.price.toFixed(2) }`//PEGANDO O VALOR DO PRODUTO NO JSON E JOGANDO NO PRODUTO
     proDuto.querySelector('.tamanho').innerHTML = item.size//PEGANDO O TAMANHO DO PRODUTO NO JSON E JOGANDO NO PRODUTO
+    
     //AQUI ESTÁ SENDO INTERROMPIDO O COMPORTAMENTO PADRÃO DO DETERMINADO ELEMENTO.
     proDuto.querySelector('.link-produto').addEventListener('click', (e)=>{
         e.preventDefault();
-        c('.window-area-produtos').style.display = 'flex'
 
+
+        //FAZ COM QUE O MODAL CRIE UM EFEITO DE ANIMAÇÃO PARA QUE ELE ABRA MAIS MALEÁVEL EM VEZ DE ABRIR DE UMA VEZ
+
+        c('.window-area-produtos').style.opacity = 0;
+        c('.window-area-produtos').style.display = 'flex'
+        setTimeout(()=>{ //PARA QUE ELE DE O EFEITO DESEJADO PRECISA ESPERAR UM POQUINHO PO ISSO USMOS setTIMEOUT
+            c('.window-area-produtos').style.opacity = 1;//O EFEITO OPACITY DO 0 ATÉ 1 DE FORMA PAUSADA CRIA ESSSA ANIMALÇÃO
+        },100)
 
         
     })
