@@ -110,11 +110,13 @@ produtosJson.map((item, index)=>{
             c('.window-area-produtos').style.opacity = 1;//O EFEITO OPACITY DO 0 ATÉ 1 DE FORMA PAUSADA CRIA ESSSA ANIMALÇÃO
         },100)
 
-        
+        c('.cancela-modal').addEventListener('click', () => {//FECHA O MODAL AO CLICAR NO BOTÃO CANCELA
+            c('.window-area-produtos').style.display = 'none'
+        })
+
     })
 
-   
-  
+ 
   
   
   
