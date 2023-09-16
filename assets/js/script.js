@@ -111,7 +111,14 @@ produtosJson.map((item, index)=>{
         },100)
 
         c('.cancela-modal').addEventListener('click', () => {//FECHA O MODAL AO CLICAR NO BOTÃO CANCELA
-            c('.window-area-produtos').style.display = 'none'
+            setTimeout(()=>{
+                c('.window-area-produtos').style.opacity = 0;
+                console.log('opacuit')
+            },200)
+            setTimeout(()=>{
+                c('.window-area-produtos').style.display = 'none'
+            },500)
+            
         })
 
     })
