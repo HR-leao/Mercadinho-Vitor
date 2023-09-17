@@ -142,7 +142,9 @@ produtosJson.map((item, index)=>{
 
 
 //VERIFICAÇÃO INPUT
+const input = document.querySelector('.input-menu')
 
+console.log(input)
 
 
 
