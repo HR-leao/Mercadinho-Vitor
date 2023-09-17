@@ -325,6 +325,7 @@ nav>ul {
     margin-left: 10px;
     max-height: 300px;
     display: block;
+    user-select: none;
 }
 
 h3 {
@@ -538,6 +539,7 @@ ul>li {
     justify-content: space-between;
     padding-left: 0px;
     padding-right: 0px;
+    user-select: none;
     
 }
 .add-modal-car {
