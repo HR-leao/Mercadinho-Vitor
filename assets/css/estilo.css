@@ -529,17 +529,22 @@ ul>li {
     display: block;
     position: fixed;
     bottom: 0;
-
+    right: calc(15%);
 }
 .div-input-menu-footer input:focus {
     outline: none;
 }
-
+.div-input-menu-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(70%);
+}
 .div-input-menu-footer input {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    width: 100vw;
+    width: calc(100%);
 }
 .info-prod{
     width: 190px;
@@ -703,7 +708,9 @@ ul>li {
         bottom: 0;
 
     }
-
+    .div-input-menu-footer {
+        right: calc(15%);
+    }
     .div-input-menu-footer input:focus {
         outline: none;
     }
@@ -712,7 +719,7 @@ ul>li {
         border: 1px solid #ccc;
         border-radius: 10px;
         padding: 10px;
-        width: 100vw;
+        width: calc(100%);
     }
 
 
