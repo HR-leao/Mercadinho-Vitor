@@ -527,11 +527,18 @@ ul>li {
 
 /*INÍCIO ÁREA DO MODAL*/
 
+.div-input-menu {
+    display: none;
+}
 .div-input-menu-footer {
     border-radius: 10px;
     margin-top: 5px;
     padding: 5px;
     border: none;
+    display: block;
+    position: fixed;
+    bottom: 0;
+
 }
 .div-input-menu-footer input:focus {
     outline: none;
@@ -541,7 +548,7 @@ ul>li {
     border: 1px solid #ccc;
     border-radius: 10px;
     padding: 10px;
-    width: 90vw;
+    width: 97vw;
 }
 .info-prod{
     width: 150px;
@@ -685,7 +692,6 @@ ul>li {
 
 
 @media(max-width:600px) {
-
 
 .column-endereco img {
     margin-left: 10px;
