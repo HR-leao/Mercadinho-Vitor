@@ -91,6 +91,8 @@ const c = (el) => document.querySelector(el); //FUNÇÃO PRA ABREVIAR O QUERYSEL
 
 produtosJson.map((item, index)=>{
     let proDuto = c('.produto').cloneNode(true)//CLONANDO O PRODUTO
+
+    proDuto.setAttribute('data-key',index);//ADICIONANDO O ATRIBUTE DATAKEI COM O VALOR DO INDEX
     proDuto.querySelector('.imgProd').src = item.img;
     proDuto.querySelector('.titulo').innerHTML = `${item.name}`; //PEGANDO O NOME NO JSON E JOGANDO NO PRODUTO
     proDuto.querySelector('.descricao').innerHTML = item.description//PEGANDO A DESCRIÇÃO NO JSON E JOGANDO NO PRODUTO
@@ -101,9 +103,13 @@ produtosJson.map((item, index)=>{
     proDuto.querySelector('.link-produto').addEventListener('click', (e)=>{
         e.preventDefault();
 
-
+        //.clossest() PROCURA O ELEMENTO MAIS PRÓXIMO QUE TENHA .produto NESSE CASO O .produto ESTÁ ENVOLVIDO PELA TAG a 
+        let key = e.target.closest('.produto').getAttribute('data-key')
+        c('.img-modal img').src=item.img;
+        c('.titulo-desc-mod').innerHTML = item.name;
+        c('.cifrao').innerHTML = `R$ ${item.price.toFixed(2)}`
+       
         //FAZ COM QUE O MODAL CRIE UM EFEITO DE ANIMAÇÃO PARA QUE ELE ABRA MAIS MALEÁVEL EM VEZ DE ABRIR DE UMA VEZ
-
         c('.window-area-produtos').style.opacity = 0;
         c('.window-area-produtos').style.display = 'flex'
         setTimeout(()=>{ //PARA QUE ELE DE O EFEITO DESEJADO PRECISA ESPERAR UM POQUINHO PO ISSO USMOS setTIMEOUT
@@ -142,10 +148,6 @@ produtosJson.map((item, index)=>{
 
 
 //VERIFICAÇÃO INPUT
-const input = document.querySelector('.input-menu')
-
-console.log(input)
-
 
 
 

@@ -17,7 +17,9 @@ body {
 
 }
 
-
+img {
+    width: 300px;
+}
 address {
 
     font-style: normal;
@@ -166,15 +168,10 @@ address {
     font-size: 17px;
     font-family: 'PT Serif', serif;
 }
-.descricao-mod {
-    font-size: 15px;
-    font-family: 'PT Serif', serif;
-    color: #EEE;
-    margin-bottom: 20px;
-}
+
 .preco-button {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .cifrao{
@@ -551,7 +548,7 @@ ul>li {
     width: 100vw;
 }
 .info-prod{
-    width: 150px;
+    width: 190px;
 }
 
 .windows-body-produto {
@@ -569,10 +566,11 @@ ul>li {
 }
 .add-modal-car {
     padding: 5px;
-    text-align: center;
     width: 100px;
     height: 40px;
     font-size: 10px;
+    display: flex;
+    align-items: center;
 }
 .cancela-modal {
     font-size: 12px;
@@ -591,6 +589,10 @@ ul>li {
 }
 .div-button-modal span {
     font-size: 12px;
+}
+
+.img-modal img{
+    width: 160px;
 }
 /*FIM ÁREA DO MODAL*/
 
@@ -735,6 +737,11 @@ ul>li {
 
 .produto img {
     height: 50px;
+}
+
+.info-prod {
+
+    width: 190px;
 }
 .column-endereco img {
     margin-top: -5px;
