@@ -213,7 +213,7 @@ address {
 .div-input-menu {
     display: flex;
     justify-content: center;
-
+    
 }
 .div-input-menu-footer {
     display: none;
@@ -508,12 +508,6 @@ ul>li {
 
 
 
-.cNav {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
-    
-}
 
 
 
