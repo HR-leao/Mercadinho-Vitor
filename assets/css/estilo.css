@@ -123,6 +123,7 @@ address {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-shadow: 0px 0px 8px 1px #eee;
 }
 
 .windows-body-produto {
@@ -589,6 +590,7 @@ ul>li {
     font-size: 10px;
     display: flex;
     align-items: center;
+    text-align: center;
 }
 .cancela-modal {
     font-size: 12px;
@@ -761,7 +763,7 @@ ul>li {
 
 .info-prod {
 
-    width: 190px;
+    width: 180px;
 }
 .column-endereco img {
     margin-top: -5px;
