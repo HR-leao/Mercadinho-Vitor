@@ -218,7 +218,9 @@ address {
     justify-content: center;
 
 }
-
+.div-input-menu-footer {
+    display: none;
+}
 .div-input-menu input {
     width: 50%;
     max-width: 500px;
