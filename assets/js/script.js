@@ -108,7 +108,7 @@ produtosJson.map((item, index)=>{
         c('.img-modal img').src=item.img;
         c('.titulo-desc-mod').innerHTML = item.name;
         c('.cifrao').innerHTML = `R$ ${item.price.toFixed(2)}`
-       
+        c('.desc-mod').innerHTML= item.description;
         //FAZ COM QUE O MODAL CRIE UM EFEITO DE ANIMAÇÃO PARA QUE ELE ABRA MAIS MALEÁVEL EM VEZ DE ABRIR DE UMA VEZ
         c('.window-area-produtos').style.opacity = 0;
         c('.window-area-produtos').style.display = 'flex'

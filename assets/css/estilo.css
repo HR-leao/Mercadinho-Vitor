@@ -94,6 +94,10 @@ address {
 /*FIM CONFIGURAÇÃO DO CARRINHO*/
 
 /*INÍCIO CONFIGURAÇÃO DO MODAL*/
+.titulo-desc-mod {
+    font-size: 25px;
+    font-weight: bold;
+}
 .window-area-produtos {
     position: fixed;
     left: 0;
@@ -108,7 +112,11 @@ address {
     display: none;
 }
 
-
+.info-prod{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 .windows-body-produto {
     width: 900px;
@@ -119,6 +127,7 @@ address {
     margin: 20px 0px;
     justify-content: space-between;
     padding: 50px;
+
 }
 
 .button-modal-mn,
@@ -548,6 +557,7 @@ ul>li {
 }
 .info-prod{
     width: 190px;
+
 }
 
 .windows-body-produto {
