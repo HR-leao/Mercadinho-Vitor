@@ -86,7 +86,7 @@ pizzaItem.querySelector('.pizza-item--desc').innerHTML = item.description;
 
 const c = (el) => document.querySelector(el); //FUNÇÃO PRA ABREVIAR O QUERYSELECTOR
 
-
+const all = (el) => document.querySelectorAll(el)
 /*CLONANDO PRODUTOS */
 
 produtosJson.map((item, index)=>{
@@ -127,23 +127,27 @@ produtosJson.map((item, index)=>{
             
         })
 
+
+
     })
 
 
- 
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
     c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
 
+
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -206,9 +206,8 @@ address {
     cursor: pointer;
     background-color: #48d05f;
 }
-.cancela-modal:hover {
-    background-color: red;
-    color: #FFF;
+.cancela-modal {
+    user-select: none;
 }
 .cancela-modal {
     padding: 15px;
