@@ -132,8 +132,42 @@ produtosJson.map((item, index)=>{
     })
 
 
-
     c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
+
+    let input = c('#input-menu');
+    
+    input.addEventListener('keyup', (e) => {
+        let value = input.value.trim().toUpperCase(); // Converter o valor do input para maiúsculas e remover espaços em branco
+
+        if (e.key === 'Enter') {
+            let produtoCorrespondente = null; // Variável para armazenar o elemento correspondente
+
+            produtosJson.forEach((item, index) => {
+                let nome = item.name.toUpperCase();
+
+                if (value === nome) {
+                    // Você encontrou um produto que corresponde ao nome digitado.
+                    // Atualize a variável "produtoCorrespondente" com o elemento correspondente.
+                    produtoCorrespondente = c(`.produto[data-key="${index}"]`);
+                }
+            });
+
+            if (produtoCorrespondente) {
+                // Faça algo com o elemento encontrado, por exemplo, adicionar uma classe para destacá-lo.
+                produtoCorrespondente.style.backgroundColor='red'
+                const todosprod =all('.produto');
+                todosprod.forEach((produto)=>{
+                    if(produto!== produtoCorrespondente) {
+                        produto.style.display='none'
+                    }if(value === '') {
+                        produto.style.display = 'flex'
+                    }
+                })
+                // Role a página para que o elemento fique visível, se necessário.
+                
+            }
+        }
+    });
 
 
 });
