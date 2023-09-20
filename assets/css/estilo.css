@@ -529,13 +529,7 @@ ul>li {
 
 /*INÍCIO ÁREA DO MODAL*/
 
-.div-input-menu{
-    position: absolute;
-    bottom: 0;
-    position: fixed;
-    right: calc(40%);
 
-}
 .div-input-menu input {
     width: 100%;
     max-width: 500px;
@@ -699,13 +693,6 @@ ul>li {
 
 @media(max-width:600px) {
 
-.div-input-menu {
-        position: absolute;
-        bottom: 0;
-        position: fixed;
-        right: calc(25%);
-
-    }
 
     .div-input-menu input {
         width: 100%;
