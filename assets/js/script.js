@@ -154,25 +154,27 @@ produtosJson.map((item, index)=>{
             });
             
             if (produtoCorrespondente) {
-                
+                produtoCorrespondente.style.marginRight='130px'
                 const todosprod =all('.produto');
                 todosprod.forEach((produto)=>{
                     if(produto!== produtoCorrespondente) {
                         produto.style.display='none'
                     }
-
+                    
 
                 })
                 // Role a página para que o elemento fique visível, se necessário.
             }
             
             t = c('#input-menu').value
+
+            
             if (t === '') {
                 
                 const volta  = all('.produto');
                 volta.forEach((e)=>{
                     e.style.display='flex'
-                    
+                    e.style.marginRight=""
                 })
                 
             } 
