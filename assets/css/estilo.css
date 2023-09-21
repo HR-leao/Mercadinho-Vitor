@@ -228,7 +228,7 @@ address {
 }
 
 .div-input-menu input {
-    width: 50%;
+    width: 70%;
     max-width: 500px;
     border: 1px solid #008000;
     border-radius: 10px;
@@ -531,7 +531,7 @@ ul>li {
 
 
 .div-input-menu input {
-    width: 100%;
+    width: 70%;
     max-width: 500px;
     border: 1px solid #008000;
     border-radius: 10px;
@@ -695,7 +695,7 @@ ul>li {
 
 
     .div-input-menu input {
-        width: 100%;
+        width: 70%;
         max-width: 500px;
         border: 1px solid #008000;
         border-radius: 10px;
