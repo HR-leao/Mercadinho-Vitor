@@ -16,7 +16,9 @@ body {
     overflow-x: hidden;
 
 }
-
+footer {
+    margin-bottom: 0px;
+}
 img {
     width: 300px;
 }
