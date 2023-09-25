@@ -18,8 +18,8 @@ let RefriJson = [
     { id: 3, name: 'Coca cola', img: 'assets/images-Produtos/coca-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante'},
     { id: 4, name: 'Mineirinho', img: 'assets/images-Produtos/mineirinho2l.png', price: 10, size: ['2L'], description: 'Refrigerante'},
     { id: 5, name: 'Kuat', img: 'assets/images-Produtos/kuat-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
-    { id: 6, name: 'Cliper Limão', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Cerveja'},
-    { id: 7, name: 'Cliper Guaraná', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Cerveja'}
+    { id: 6, name: 'Cliper', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Limão' },
+    { id: 7, name: 'Cliper', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Guaraná' }
     
 ]
 
