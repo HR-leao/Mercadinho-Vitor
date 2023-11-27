@@ -40,14 +40,14 @@ LINKS  DEPENDÊNCIAS PARA O FUNCIONAMENTO DO SLICK
 $(document).ready(function () {
     $('.slides').slick({
 
-        vertical:true,
+        vertical:false,
         autoplay: true,  // Ativar a reprodução automática
-        autoplaySpeed: 4000,  // Intervalo de tempo entre os slides (em milissegundos)
+        autoplaySpeed: 3000,  // Intervalo de tempo entre os slides (em milissegundos)
         dots: false,  // Mostrar indicadores de pontos
         infinite: true,  // Repetir o carrossel indefinidamente
-        speed: 1000,  // Velocidade de transição (em milissegundos)
-        fade: True,  // Ativar transições de fade
-        cssEase: 'ease-in-out'  // Tipo de transição
+        speed: 2000,  // Velocidade de transição (em milissegundos)
+        fade: false,  // Ativar transições de fade
+        cssEase: 'ease-out'  // Tipo de transição
     });
 
 });

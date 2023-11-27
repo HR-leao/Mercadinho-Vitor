@@ -300,13 +300,17 @@ input:focus{
 
 /*INÍCIO CONFIGURANDO SLIDER*/
 
-
 .slid.p {
-    transition: ease-in-out;
+    
     transition-duration: 3s;
+    overflow: hidden;
+    z-index: 1;
 }
 .slides {
+    transition: ease-out;
     display: flex;
+    width: 100%vw;
+    
 }
 
 .slid img  {
@@ -315,6 +319,8 @@ input:focus{
     height: 300px;
     
 }
+
+
 
 
 /*FIM CONFIGURANDO SLIDER*/
