@@ -46,7 +46,7 @@ $(document).ready(function () {
         dots: false,  // Mostrar indicadores de pontos
         infinite: true,  // Repetir o carrossel indefinidamente
         speed: 1000,  // Velocidade de transição (em milissegundos)
-        fade: false,  // Ativar transições de fade
+        fade: True,  // Ativar transições de fade
         cssEase: 'ease-in-out'  // Tipo de transição
     });
 
@@ -133,7 +133,7 @@ produtosJson.map((item, index)=>{
 
 
     c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
-
+})
 // CONTINUEMMOS
 
 
@@ -141,7 +141,3 @@ produtosJson.map((item, index)=>{
 
 
 //CONFIGURALÇÃO DO MENU
-
-
-
-
