@@ -301,11 +301,11 @@ input:focus{
 /*INÍCIO CONFIGURANDO SLIDER*/
 
 .slid.p {
-    
     transition-duration: 3s;
     overflow: hidden;
     z-index: 1;
 }
+
 .slides {
     transition: ease-out;
     display: flex;
