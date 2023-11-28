@@ -129,11 +129,36 @@ produtosJson.map((item, index)=>{
 
 
     })
+    let search = document.getElementById('input-menu')
+    let pdJ = produtosJson
+    search.addEventListener('change', filterProd)
 
+
+
+    function filterProd(){
+        if(search.value !='') {
+            for(let produto of pdJ){
+                let nameP = produto.name
+                nameP= nameP.toLowerCase()
+                let filterInput = search.value.toLowerCase()
+                if(filterInput == nameP){
+                    console.log(nameP)
+                }else{
+                    
+                    console.log()
+                }
+                
+            }
+        }
+    }
 
 
     c('.produto-area').append(proDuto)//ADICIONANDO O PRODUTO CLONADO NA DIV QUE COLOQUEI ESPECIALMENTE PRA ELES
+
 })
+
+
+
 // CONTINUEMMOS
 
 

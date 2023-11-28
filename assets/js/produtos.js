@@ -10,8 +10,8 @@ let produtosJson = [
     { id: 8, name:'Brama', img: 'assets/images-Produtos/brama.png', price: 10, size: [], description: 'Cerveja'},
     { id: 9, name:'Heineken', img: 'assets/images-Produtos/heineken.png', price: 10, size: [], description: 'Cerveja'},
     { id: 10, name:'Itaipava', img: 'assets/images-Produtos/itaipava.png', price: 10, size: [], description: 'Cerveja'},
-    { id: 11, name: 'Cliper', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limão' },
-    { id: 12, name: 'Cliper', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
+    { id: 11, name: 'Cliper Limão', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limão' },
+    { id: 12, name: 'Cliper Guaraná', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
 
 ]
 
