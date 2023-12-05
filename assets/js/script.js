@@ -4,14 +4,14 @@
 $(document).ready(function () {
     $('.slides').slick({
 
-        vertical:false,
-        autoplay: true,  
-        autoplaySpeed: 3000, 
-        dots: false, 
-        infinite: true,  
-        speed: 2000,  
-        fade: false, 
-        cssEase: 'ease-out' 
+        vertical: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        dots: false,
+        infinite: true,
+        speed: 2000,
+        fade: false,
+        cssEase: 'ease-out'
     });
 
 });
@@ -19,13 +19,13 @@ $(document).ready(function () {
 
 
 let mnSanduIch = document.querySelector('.div--menu')
-let bLateral = document.querySelector('.nav-sidebar-left') 
+let bLateral = document.querySelector('.nav-sidebar-left')
 
-mnSanduIch.addEventListener('click', ()=>{
-    if(bLateral.classList.contains('open')){
+mnSanduIch.addEventListener('click', () => {
+    if (bLateral.classList.contains('open')) {
         bLateral.classList.remove('open')
         console.log('CONTEM')
-    }else {
+    } else {
         bLateral.classList.add('open')
     }
 })
@@ -33,75 +33,81 @@ mnSanduIch.addEventListener('click', ()=>{
 
 
 
-const c = (el) => document.querySelector(el); 
+const c = (el) => document.querySelector(el);
 
 const all = (el) => document.querySelectorAll(el)
 
 
-produtosJson.map((item, index)=>{
-    let proDuto = c('.produto').cloneNode(true)
+produtosJson.forEach((item, index) => {
+    const produto = document.createElement('div');
+    produto.classList.add('produto');
+    produto.setAttribute('data-key', index);
 
-    proDuto.setAttribute('data-key',index);
-    proDuto.querySelector('.imgProd').src = item.img;
-    proDuto.querySelector('.titulo').innerHTML = `${item.name}`; 
-    proDuto.querySelector('.descricao').innerHTML = item.description
-    proDuto.querySelector('.valor').innerHTML = `R$ ${item.price.toFixed(2) }`
-    proDuto.querySelector('.tamanho').innerHTML = item.size/
-    
-    
-    proDuto.querySelector('.link-produto').addEventListener('click', (e)=>{
+    const imgProd = document.createElement('img');
+    imgProd.classList.add('imgProd')
+    imgProd.src = item.img;
+    produto.appendChild(imgProd);
+
+
+    const add = document.createElement('div');
+    add.classList.add('add');
+    add.textContent ='+';
+    produto.appendChild(add)
+
+    const titulo = document.createElement('h3');
+    titulo.classList.add('titulo');
+    titulo.textContent = item.name;
+    produto.appendChild(titulo);
+
+    const descricao = document.createElement('p');
+    descricao.classList.add('descricao');
+    descricao.textContent = item.description;
+    produto.appendChild(descricao);
+
+    const valor = document.createElement('p');
+    descricao.classList.add('valor');
+    descricao.textContent = `R$ ${item.price.toFixed(2)}`;
+    produto.appendChild(valor);
+
+    const tamanho = document.createElement('p');
+    tamanho.classList.add('tamanho');
+    tamanho.textContent = item.size;
+    produto.appendChild(tamanho);
+
+
+    const linkProduto = document.createElement('a');
+    linkProduto.classList.add('link-produto');
+    linkProduto.addEventListener('click', (e) => {
         e.preventDefault();
 
-        let key = e.target.closest('.produto').getAttribute('data-key')
-        c('.img-modal img').src=item.img;
-        c('.titulo-desc-mod').innerHTML = item.name;
-        c('.cifrao').innerHTML = `R$ ${item.price.toFixed(2)}`
-        c('.desc-mod').innerHTML= item.description;
-        
-        c('.window-area-produtos').style.opacity = 0;
-        c('.window-area-produtos').style.display = 'flex'
-        setTimeout(()=>{ 
-            c('.window-area-produtos').style.opacity = 1;
-        },100)
+        const key = e.target.closest('.produto').getAttributute('data-key');
+        document.querySelector('.image-modal img').src = item.img;
+        document.querySelector('.titulo-desc-mod').textContent = item.name;
+        document.querySelector('.cifrao').textContent = `R$ ${item.price.toFixed(2)}`;
+        document.querySelector('.desc-mod').textContent = item.description;
 
-        c('.cancela-modal').addEventListener('click', () => {
-            setTimeout(()=>{
-                c('.window-area-produtos').style.opacity = 0; 
-                
-            },200)
-            setTimeout(()=>{
-                c('.window-area-produtos').style.display = 'none'
-            },500)
-            
-        })
+        document.querySelector('.window-area-produtos').style.opacity = 0;
+        document.querySelector('.window-area-produtos').style.display = 'flex';
+        setTimeout(() => {
+            document.querySelector('.window-area-produtos').style.opacity = 1;
+        }, 100);
 
-
-    })
-    let search = document.getElementById('input-menu')
-    let pdJ = produtosJson
-    search.addEventListener('change', filterProd)
+        document.querySelector('.cancela-modal').addEventListener('click', (e) => {
+            setTimeout(() => {
+                document.querySelector('.window-area-produtos').style.opacity = 0;
+            }, 200);
+            setTimeout(() => {
+                document.querySelector('.window-area-produtos').style.display = 'none';
+            }, 500);
+        });
+    });
 
 
 
-    function filterProd(){
-        if(search.value !='') {
-            for(let produto of pdJ){
-                let nameP = produto.name
-                nameP= nameP.toLowerCase()
-                let filterInput = search.value.toLowerCase()
-                if(filterInput == nameP){
-                    console.log(nameP)
-                }else{
-                    
-                    console.log()
-                }
-                
-            }
-        }
-    }
+    console.log(produto)
 
-
-    c('.produto-area').append(proDuto)
+    produto.appendChild(linkProduto)
+    document.querySelector('.produto-area').appendChild(produto)
 
 })
 
