@@ -300,16 +300,11 @@ input:focus{
 
 /*INÍCIO CONFIGURANDO SLIDER*/
 
-.slid.p {
-    transition-duration: 3s;
-    overflow: hidden;
-    z-index: 1;
-}
 
 .slides {
     transition: ease-out;
     display: flex;
-    width: 100%vw;
+    width: 100%;
     
 }
 
@@ -453,7 +448,8 @@ ul>li {
 .cont-tam div {
     margin-right: 2px;
 }
-.produto img {
+
+#produto img {
     width: 80px;
     height: 80px;
 }
@@ -467,7 +463,7 @@ ul>li {
     
 }
 
-.produto {
+#produto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -489,7 +485,7 @@ ul>li {
     
 }
 
-.produto-area {
+#produto-area {
     display: flex;
     flex-wrap: wrap;
 }
@@ -648,17 +644,17 @@ ul>li {
     font-size: 11px;
     
 }
-.produto img {
+#produto img {
     width: 60px;
     height: 80px;
 }
 
-.produto {
+#produto {
     font-size: 10px;
     height: 130px;
 }
 
-.produto  .descricao {
+#produto  .descricao {
     font-size: 9px;
 }
 .nav-sidebar-left {
@@ -725,7 +721,7 @@ ul>li {
 }
 
 
-.produto img {
+#produto img {
     height: 50px;
 }
 
@@ -737,7 +733,7 @@ ul>li {
     margin-top: -5px;
     margin-right: 3px;
 }
-.produto {
+#produto {
     height: 140px;
     width: 90px;
     font-size: 11px;
@@ -757,7 +753,7 @@ ul>li {
     margin-top: 42px;
     flex-wrap: wrap;
 }
-.produto .descricao {
+#produto .descricao {
     font-size: 9px;
 }
 }
