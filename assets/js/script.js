@@ -88,7 +88,7 @@ const input = document.querySelector('.div-input-menu input');
                    clone.querySelector('.valor').innerHTML = e.price;
                    const areaProduto = document.querySelector('.produto-area')
                    areaProduto.appendChild(clone)
-                   console.log(input.value)
+                  
                    
                })
              }if(valorInput === ''){
@@ -112,7 +112,7 @@ function Clonando () {
         clone.querySelector('.valor').innerHTML = e.price;
         const areaProduto = document.querySelector('.produto-area')
         areaProduto.appendChild(clone)
-        console.log(input.value)
+
     })
 }
 
