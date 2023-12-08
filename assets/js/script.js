@@ -42,9 +42,7 @@ const all = (el) => document.querySelectorAll(el)
 
 
 
-const Mercadorias = {
-    all() {
-        return[ // O RETURNE SERVE PARA QUE ELE RETORNE OS VALORES PARA A VARIÁVEL OU FUNÇÃO
+const Mercadorias = [ 
             { id: 1, name: 'Grapete', img: 'assets/images-Produtos/grapete-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
             { id: 2, name: 'Cliper', img: 'assets/images-Produtos/cliper-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Cola' },
             { id: 3, name: 'Coca cola', img: 'assets/images-Produtos/coca-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
@@ -57,14 +55,71 @@ const Mercadorias = {
             { id: 10, name: 'Itaipava', img: 'assets/images-Produtos/itaipava.png', price: 10, size: ['2L'], description: 'Cerveja' },
             { id: 11, name: 'Cliper Limão', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limão' },
             { id: 12, name: 'Cliper Guaraná', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
-        ]
-    },
+]
+    
     /*NESTA ÁREA EU ESTOU USANDO O FILTER PARA CRIAR UM NOVO ARRAY O FILTER TAMBÉM PRECISA DA CALBACK NESSE CASO É A FUNÇÃO QUE ESTÁ VERIFICANDO SE EM
     Mercadorias EXITE UM DETERMINADO NOME.
     O RETURN ESTÁ SENDO USADO PARA RETORNAR OS VALORES DA VARIÁVEL MERCADORIAS QUE NESSE CASO TEM VÁRIOS OBJETOS (VAI RETORNAR TODOS) PARA
 
     */
-    todosNomes(nome){ /*todosNomes é um método (MÉTODO É UMA FUNÇÃO QUE ESTÁ RELACIONADA A UM OBJETO ESPECÍFICO) */
-        return this.all().filter((Mercadorias) =>Mercadorias.name.includes(nome))
-    }
-};
+
+
+
+
+const input = document.querySelector('.div-input-menu input');
+
+    input.addEventListener('input',(e)=>{
+       
+        
+        const valorInput = e.target.value.toUpperCase();
+        
+        const FiltroProdutos = Mercadorias.filter(item => valorInput === item.name.toUpperCase())
+        
+
+           if(valorInput){
+            LimpaTela()
+               FiltroProdutos.forEach((e) => {
+                  
+                   const produto = document.querySelector('.produto');
+                   const clone = produto.cloneNode(true);
+                   clone.querySelector('.titulo').innerHTML = e.name;
+                   clone.querySelector('.descricao').innerHTML = e.description;
+                   clone.querySelector('.imgProd').src = e.img;
+                   clone.querySelector('.valor').innerHTML = e.price;
+                   const areaProduto = document.querySelector('.produto-area')
+                   areaProduto.appendChild(clone)
+                   console.log(input.value)
+                   
+               })
+             }if(valorInput === ''){
+                LimpaTela();
+                Clonando();
+             }
+             
+       
+    })
+
+
+
+
+function Clonando () {
+    Mercadorias.forEach((e) => {
+        const produto = document.querySelector('.produto');
+        const clone = produto.cloneNode(true);
+        clone.querySelector('.titulo').innerHTML = e.name;
+        clone.querySelector('.descricao').innerHTML = e.description;
+        clone.querySelector('.imgProd').src = e.img;
+        clone.querySelector('.valor').innerHTML = e.price;
+        const areaProduto = document.querySelector('.produto-area')
+        areaProduto.appendChild(clone)
+        console.log(input.value)
+    })
+}
+
+function LimpaTela () {
+    document.querySelector('.produto-area').innerHTML= ''
+}
+
+
+
+Clonando();
