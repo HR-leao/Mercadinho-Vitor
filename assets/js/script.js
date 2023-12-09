@@ -73,11 +73,11 @@ const input = document.querySelector('.div-input-menu input');
         
         const valorInput = e.target.value.toUpperCase();
         
-        const FiltroProdutos = Mercadorias.filter(item => valorInput === item.name.toUpperCase())
+        const FiltroProdutos = Mercadorias.filter(item => item.name.toUpperCase().includes(valorInput))
         
-
-           if(valorInput){
-            LimpaTela()
+        LimpaTela()
+           if(FiltroProdutos.length >0){
+            
                FiltroProdutos.forEach((e) => {
                   
                    const produto = document.querySelector('.produto');
