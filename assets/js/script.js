@@ -78,19 +78,17 @@ function MostraProdutos () {
 
 
             clone.addEventListener('click', (e)=>{
-                const modal = document.querySelector('.window-area-produtos ')
-                const fechar = document.querySelector('.cancela-modal')
-                
-                let guarda = clone
+                const modal = document.querySelector('.window-area-produtos ');
+                const fechar = document.querySelector('.cancela-modal');
 
                 fechar.addEventListener('click',()=>{
                     modal.classList.remove('open')
 
-                })
+                });
                 if (modal) {
                     modal.classList.add('open')
                     
-                }
+                };
                 //JOGANDO INFORMAÇÕES NO MODAL
                 document.querySelector('.titulo-modal').innerHTML=item.name;
                 document.querySelector('.desc-mod').innerHTML=item.description;
@@ -98,7 +96,7 @@ function MostraProdutos () {
                 document.querySelector('.img-modal img').src=item.img
                 
 
-            })
+            });
         });
         
         
