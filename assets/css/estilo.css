@@ -98,9 +98,11 @@ address {
 /*INÍCIO CONFIGURAÇÃO DO MODAL*/
 
 
+
 .titulo-desc-mod {
     font-size: 25px;
     font-weight: bold;
+    cursor: pointer;
     
 }
 .window-area-produtos {
@@ -109,11 +111,9 @@ address {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: red;
     transition: all ease .5s;
-    justify-content: center;
-    align-items: center;
-    overflow-y: auto;
+    overflow-y: hidden;
     display: none;
 }
 
@@ -129,7 +129,8 @@ address {
     border-radius: 10px;
     box-shadow: 0px 0px 15px #999;
     display: flex;
-    margin: 20px 0px;
+    margin: auto;
+    margin-top: 100px;
     justify-content: space-between;
     padding: 50px;
 
@@ -480,12 +481,14 @@ ul>li {
     box-shadow: 3px 0px 6px 2px #eee;
     border-radius: 5px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .descricao {
     font-size: 13px;
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    cursor: pointer;
     
 }
 
@@ -497,24 +500,10 @@ ul>li {
 
 .titulo {
     font-family: 'Lato', sans-serif;
+    cursor: pointer;
 }
 
-.add {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 20px;
-    width: 20px;
-    border-radius: 4px;
-    background-color: #c81a8e;
-    font-size: 20px;
-    font-weight: 600;
-    margin-top: 3px;
-    margin-bottom: 10px;
-}
-.add:hover {
-    background-color: #00FF7F;
-}
+
 
 .link-produto {
     display: flex;
@@ -566,15 +555,7 @@ ul>li {
     user-select: none;
     
 }
-.add-modal-car {
-    padding: 5px;
-    width: 100px;
-    height: 40px;
-    font-size: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-}
+
 .cancela-modal {
     font-size: 12px;
     text-align: center;
@@ -601,14 +582,6 @@ ul>li {
 
 }
 /*FIM ÁREA DO MODAL*/
-
-
-
-
-
-
-
-
 
 
 
@@ -692,6 +665,8 @@ ul>li {
 
 }
 }
+
+
 
 .open {
     display: block;

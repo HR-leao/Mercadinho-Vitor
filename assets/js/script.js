@@ -77,7 +77,26 @@ function MostraProdutos () {
 
 
             clone.addEventListener('click', (e)=>{
-                console.log(e.currentTarget)
+                const modal = document.querySelector('.window-area-produtos ')
+                const fechar = document.querySelector('.cancela-modal')
+                
+                let guarda = clone
+
+                fechar.addEventListener('click',()=>{
+                    modal.classList.remove('open')
+
+                })
+                if (modal) {
+                    modal.classList.add('open')
+                    
+                }
+                //JOGANDO INFORMAÇÕES NO MODAL
+                document.querySelector('.titulo-modal').innerHTML=item.name;
+                document.querySelector('.desc-mod').innerHTML=item.description;
+                document.querySelector('.cifrao').innerHTML=item.price;
+                document.querySelector('.img-modal img').src=item.img
+                
+
             })
         });
         
