@@ -31,17 +31,6 @@ mnSanduIch.addEventListener('click', () => {
 })
 
 
-
-
-const c = (el) => document.querySelector(el);
-
-const all = (el) => document.querySelectorAll(el)
-
-
-
-
-
-
 const Mercadorias = [ 
             { id: 1, name: 'Grapete', img: 'assets/images-Produtos/grapete-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
             { id: 2, name: 'Cliper', img: 'assets/images-Produtos/cliper-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Cola' },
@@ -63,63 +52,44 @@ const Mercadorias = [
 
     */
 
+let FilterProdutos = [];
+const input = document.querySelector('.div-input-menu input')
+const produto = document.querySelector('.produto');
+const areaProduto = document.querySelector('.produto-area')
 
 
+function MostraProdutos () {
+        const valorInput = input.value.toLowerCase();
 
-const input = document.querySelector('.div-input-menu input');
+        FilterProdutos = Mercadorias.filter(item => item.name.toLowerCase().includes(valorInput));
 
-    input.addEventListener('input',(e)=>{
-       
+        LimpaTela();
+
+        FilterProdutos.forEach((item, i) => {
+
+            const clone = produto.cloneNode(true);
+            clone.querySelector('.titulo').innerHTML = item.name;
+            clone.setAttribute('data-key', i)
+            clone.querySelector('.descricao').innerHTML = item.description;
+            clone.querySelector('.imgProd').src = item.img;
+            clone.querySelector('.valor').innerHTML = item.price;
+            areaProduto.appendChild(clone)
+
+
+            clone.addEventListener('click', (e)=>{
+                console.log(e.currentTarget)
+            })
+        });
         
-        const valorInput = e.target.value.toUpperCase();
         
-        const FiltroProdutos = Mercadorias.filter(item => item.name.toUpperCase().includes(valorInput))
-        
-        LimpaTela()
-           if(FiltroProdutos.length >0){
-            
-               FiltroProdutos.forEach((e) => {
-                  
-                   const produto = document.querySelector('.produto');
-                   const clone = produto.cloneNode(true);
-                   clone.querySelector('.titulo').innerHTML = e.name;
-                   clone.querySelector('.descricao').innerHTML = e.description;
-                   clone.querySelector('.imgProd').src = e.img;
-                   clone.querySelector('.valor').innerHTML = e.price;
-                   const areaProduto = document.querySelector('.produto-area')
-                   areaProduto.appendChild(clone)
-                  
-                   
-               })
-             }if(valorInput === ''){
-                LimpaTela();
-                Clonando();
-             }
-             
-       
-    })
+};
 
-
-
-
-function Clonando () {
-    Mercadorias.forEach((e) => {
-        const produto = document.querySelector('.produto');
-        const clone = produto.cloneNode(true);
-        clone.querySelector('.titulo').innerHTML = e.name;
-        clone.querySelector('.descricao').innerHTML = e.description;
-        clone.querySelector('.imgProd').src = e.img;
-        clone.querySelector('.valor').innerHTML = e.price;
-        const areaProduto = document.querySelector('.produto-area')
-        areaProduto.appendChild(clone)
-
-    })
-}
+MostraProdutos();
+input.addEventListener('input', MostraProdutos);
 
 function LimpaTela () {
-    document.querySelector('.produto-area').innerHTML= ''
+    document.querySelector('.produto-area').innerHTML='';
+
+    
 }
 
-
-
-Clonando();
