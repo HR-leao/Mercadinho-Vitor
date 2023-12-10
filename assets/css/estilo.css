@@ -111,7 +111,7 @@ address {
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: red;
+    background-color:rgba(255, 255, 255, 0.8);
     transition: all ease .5s;
     overflow-y: hidden;
     display: none;
@@ -174,7 +174,8 @@ address {
     display: flex;
     justify-content: center;
     margin-left: 10px;
-    width: 65px;
+    width: 105px;
+    height: 30px;
     border-radius: 100%;
 }
 
@@ -186,6 +187,7 @@ address {
 
 .preco-button {
     display: flex;
+    justify-content: center;
     margin-bottom: 20px;
 }
 

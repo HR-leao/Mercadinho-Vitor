@@ -72,7 +72,8 @@ function MostraProdutos () {
             clone.setAttribute('data-key', i)
             clone.querySelector('.descricao').innerHTML = item.description;
             clone.querySelector('.imgProd').src = item.img;
-            clone.querySelector('.valor').innerHTML = item.price;
+            clone.querySelector('.tamanho').innerHTML=item.size
+            clone.querySelector('.valor').innerHTML = item.price.toFixed(2);
             areaProduto.appendChild(clone)
 
 
@@ -93,7 +94,7 @@ function MostraProdutos () {
                 //JOGANDO INFORMAÇÕES NO MODAL
                 document.querySelector('.titulo-modal').innerHTML=item.name;
                 document.querySelector('.desc-mod').innerHTML=item.description;
-                document.querySelector('.cifrao').innerHTML=item.price;
+                document.querySelector('.cifrao').innerHTML=item.price.toFixed(2);
                 document.querySelector('.img-modal img').src=item.img
                 
 
