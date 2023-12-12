@@ -75,7 +75,7 @@ function MostraProdutos() {
         clone.querySelector('.tamanho').innerHTML = item.size
         clone.querySelector('.valor').innerHTML = item.price.toFixed(2);
         areaProduto.appendChild(clone)
-
+        
 
         clone.addEventListener('click', (e) => {
             const modal = document.querySelector('.window-area-produtos ');
@@ -108,7 +108,6 @@ function MostraProdutos() {
             btMenosModal.addEventListener('click', (e) => {
                 
                 if(btMenosModal && contador >1) {
-                    contador = contador--
                     qtProdutoSlide.innerHTML=contador-=1
                     console.log(qtProdutoSlide)
                 }
