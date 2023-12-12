@@ -33,7 +33,7 @@ mnSanduIch.addEventListener('click', () => {
 
 const Mercadorias = [
     { id: 1, name: 'Grapete', img: 'assets/images-Produtos/grapete-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
-    { id: 2, name: 'Cliper', img: 'assets/images-Produtos/cliper-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Cola' },
+    { id: 2, name: 'Cliper cola', img: 'assets/images-Produtos/cliper-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Cola' },
     { id: 3, name: 'Coca cola', img: 'assets/images-Produtos/coca-cola-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
     { id: 4, name: 'Mineirinho', img: 'assets/images-Produtos/mineirinho2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
     { id: 5, name: 'Kuat', img: 'assets/images-Produtos/kuat-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' },
@@ -42,8 +42,8 @@ const Mercadorias = [
     { id: 8, name: 'Brama', img: 'assets/images-Produtos/brama.png', price: 10, size: ['2L'], description: 'Cerveja' },
     { id: 9, name: 'Heineken', img: 'assets/images-Produtos/heineken.png', price: 10, size: ['2L'], description: 'Cerveja' },
     { id: 10, name: 'Itaipava', img: 'assets/images-Produtos/itaipava.png', price: 10, size: ['2L'], description: 'Cerveja' },
-    { id: 11, name: 'Cliper Limão', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limão' },
-    { id: 12, name: 'Cliper Guaraná', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
+    { id: 11, name: 'Cliper', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limo' },
+    { id: 12, name: 'Cliper', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
 ]
 
 /*NESTA ÁREA EU ESTOU USANDO O FILTER PARA CRIAR UM NOVO ARRAY O FILTER TAMBÉM PRECISA DA CALBACK NESSE CASO É A FUNÇÃO QUE ESTÁ VERIFICANDO SE EM
