@@ -361,7 +361,7 @@ width: 190px;
     background-color: #FFF;
     box-shadow: 4px 2px 8px #DDD;
     margin-top: -20px;
-    
+    display: none;
 
 }
 .nav-sidebar-left li {
