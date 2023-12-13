@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
 
 * {
     margin: 0px;
@@ -92,9 +93,52 @@ address {
 
 /*INÍCIO CONFIGURAÇÕES LOGO, PESQUISA, CARRINHO*/
 
-.carrinho-item {
-    display: none;
+#itens--carrinho img{
+    position: absolute;
+    width: 30px;
+}
 
+#carrinhoMod {
+    height: auto;
+    width: 300px;
+    background-color: #A2A2E3;
+    position: absolute;
+    right: 1px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+}
+
+#valores{
+    display: flex;
+    flex-direction: column;
+}
+
+#container-cupom,
+#container-total{
+    display: flex;
+    justify-content: space-between;
+}
+
+#button-cart{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#button-cart button {
+    border: none;
+    padding: 5px;
+    width: 130px;
+    background-color: #00A859;
+    font-size: 0.8em;
+}
+
+#logo {
+    display: flex;
+    background-color: #3F3F94;
+    align-items: flex-start;
 }
 
 
@@ -236,11 +280,14 @@ address {
 }
 
 
-
+#input-menu {
+    border:1px solid #3F3F94;
+    border-radius: 0;
+}
 
 .div-input-menu {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 
 }
 
@@ -248,8 +295,6 @@ address {
     width: 70%;
     max-width: 500px;
     border: 1px solid #008000;
-    border-radius: 10px;
-    margin-top: 5px;
     padding: 5px;
 
 }
@@ -311,7 +356,7 @@ input:focus {
 .b--menu {
     height: 4px;
     width: 10px;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #3F3F94;
 
 }
 
@@ -336,7 +381,7 @@ input:focus {
 .slid img {
     margin-top: 0px;
     width: 100%;
-    height: 300px;
+    height: 150px;
 
 }
 
@@ -349,34 +394,41 @@ input:focus {
 
 .cNav {
 height: auto;
-
 position: absolute;
 width: 190px;
+font-family: ;
 
+}
+
+ul> li {
+    border-bottom: 1px solid rgba(0, 0, 255, 0.2);   
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    align-items: center;
 }
 
 .nav-sidebar-left {
     display: block;
     user-select: none;
-    display: flex;
-    height: 100%;
+    height: 100vh;
     background-color: #FFF;
     box-shadow: 4px 2px 8px #DDD;
     margin-top: -20px;
     display: none;
 
+
 }
 .nav-sidebar-left li {
-
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+}
+.nav-sidebar-left > ul {
+    padding-left: 0px;
 }
 
-
-
-nav>ul {
-    color: #222;
-
-}
 
 #logoNav {
     display: flex;
@@ -389,12 +441,13 @@ nav>ul {
 
 
 h3 {
-    margin-bottom: 5px;
-    text-align: start;
-    margin-left: 13px;
-    padding-top: 3px;
-    color: #000;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: rgba(0, 0, 255, 0.8);
+    border-bottom: 1px solid rgba(0, 0, 255, 0.2);
+    font-family: 'Ubuntu', sans-serif;
+    
 }
 
 
@@ -402,12 +455,6 @@ h3 {
 
 
 
-ul,
-li,
-h3 {
-    padding-left: 5px;
-
-}
 
 .nav-sidebar-left li {
     display: flex;
@@ -415,19 +462,14 @@ h3 {
 
 
 li:hover {
-    background-color: #f2f2f2;
+    background-color: rgba(0, 0, 255, 0.1);
 }
 
 .ul-itens li:hover {
     color: #fff;
 }
 
-li,
-ul {
-    text-align: start;
-    cursor: pointer;
 
-}
 
 
 
@@ -531,10 +573,6 @@ li>img {
     .div-input-menu input {
         width: 70%;
         max-width: 500px;
-        border: 1px solid #008000;
-        border-radius: 10px;
-        margin-top: 5px;
-        padding: 5px;
 
     }
 
@@ -667,7 +705,7 @@ li>img {
     .b--menu {
         height: 4px;
         width: 17px;
-        border-bottom: 3px solid #999999;
+        border-bottom: 3px solid #3F3F94;
 
     }
 
@@ -693,10 +731,6 @@ li>img {
     .div-input-menu input {
         width: 70%;
         max-width: 500px;
-        border: 1px solid #008000;
-        border-radius: 10px;
-        margin-top: 5px;
-        padding: 5px;
 
     }
 

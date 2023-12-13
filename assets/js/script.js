@@ -24,9 +24,23 @@ let bLateral = document.querySelector('.nav-sidebar-left')
 mnSanduIch.addEventListener('click', () => {
     if (bLateral.classList.contains('open')) {
         bLateral.classList.remove('open')
-        console.log('CONTEM')
+        mnSanduIch.style.position = ''
+        mnSanduIch.style.right = '';
+        mnSanduIch.style.top = '';
+        mnSanduIch.innerHTML = '<div class="b--menu"></div> <div class="b--menu"></div> <div class="b--menu"></div>';
+        
+        
     } else {
         bLateral.classList.add('open')
+        mnSanduIch.style.position='absolute'
+        mnSanduIch.style.right='0';
+        mnSanduIch.style.top='-20px'
+        mnSanduIch.innerHTML='';
+        const img =document.createElement('img');
+        img.src ='assets/images-Site/x.png'
+        img.style.width='20px';
+        img.style.height='20px'
+        mnSanduIch.appendChild(img)
     }
 })
 
@@ -56,7 +70,8 @@ let FilterProdutos = [];
 const input = document.querySelector('.div-input-menu input')
 const produto = document.querySelector('.produto');
 const areaProduto = document.querySelector('.produto-area')
-
+const modal = document.querySelector('.window-area-produtos ');
+const fechar = document.querySelector('.cancela-modal');
 
 function MostraProdutos() {
     const valorInput = input.value.toLowerCase();
@@ -78,9 +93,6 @@ function MostraProdutos() {
         
 
         clone.addEventListener('click', (e) => {
-            const modal = document.querySelector('.window-area-produtos ');
-            const fechar = document.querySelector('.cancela-modal');
-
             fechar.addEventListener('click', () => {
                 modal.classList.remove('open')
 
@@ -129,12 +141,26 @@ function MostraProdutos() {
 
 };
 
-MostraProdutos();
+const Vtela = window.addEventListener('resize',VerificaTela)
 input.addEventListener('input', MostraProdutos);
 
+
+function VerificaTela () {
+        var larguraTela = window.innerWidth;
+        if(larguraTela > 720) {
+            bLateral.classList.remove('open')
+            mnSanduIch.style.position = ''
+            mnSanduIch.style.right = '';
+            mnSanduIch.style.top = '';
+            mnSanduIch.innerHTML = '<div class="b--menu"></div> <div class="b--menu"></div> <div class="b--menu"></div>';
+        }
+}
 function LimpaTela() {
     document.querySelector('.produto-area').innerHTML = '';
 
 
 }
 
+
+VerificaTela();
+MostraProdutos();
