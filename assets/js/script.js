@@ -1,6 +1,6 @@
 
 
-
+//SLIDE
 $(document).ready(function () {
     $('.slides').slick({
 
@@ -18,9 +18,10 @@ $(document).ready(function () {
 
 
 
+
+//ABRIR E FECHAR MENU LATERAL ESQUERDO
 let mnSanduIch = document.querySelector('.div--menu')
 let bLateral = document.querySelector('.nav-sidebar-left')
-
 mnSanduIch.addEventListener('click', () => {
     if (bLateral.classList.contains('open')) {
         bLateral.classList.remove('open')
@@ -39,11 +40,49 @@ mnSanduIch.addEventListener('click', () => {
         const img =document.createElement('img');
         img.src ='assets/images-Site/x.png'
         img.style.width='20px';
-        img.style.height='20px'
+        img.style.height='20px';
         mnSanduIch.appendChild(img)
     }
 })
 
+const Vtela = window.addEventListener('resize', VerificaTela)
+
+//FUNÇÃO PARA ESCONDER MENU LATERAL ALTOMÁTICO
+function VerificaTela() {
+    var larguraTela = window.innerWidth;
+    if (larguraTela > 720) {
+        bLateral.classList.remove('open')
+        mnSanduIch.style.position = ''
+        mnSanduIch.style.right = '';
+        mnSanduIch.style.top = '';
+       mnSanduIch.style.display='block';
+    }
+};
+
+
+//FUNÇÃO PARA ABRIR E FECHAR CARRINHO.
+const abrir = document.querySelector('#itens--carrinho #abrecart');
+const closeCart = document.querySelector('.closeCart');
+const modalCart = document.querySelector('.carrinhoMod');
+OpenCloseCart(abrir, closeCart, modalCart);
+
+function OpenCloseCart(a, b, c) {
+    a.addEventListener('click', () => {
+       a && b.classList.contains('open') ? c.classList.remove('open') : c.classList.add('open');
+
+    })
+
+    b.addEventListener('click',()=>{
+        b && c.classList.contains('open') ? c.classList.remove('open') : '';
+    })
+};
+
+
+//ADICIONANDO ITENS NO CARRINHO DE COMPRA
+
+let shoppingCart = [];
+
+//MERCADORIAS.JSON
 
 const Mercadorias = [
     { id: 1, name: 'Grapete', img: 'assets/images-Produtos/grapete-2l.png', price: 10, size: ['2L'], description: 'Refrigerante' },
@@ -56,20 +95,19 @@ const Mercadorias = [
     { id: 8, name: 'Brama', img: 'assets/images-Produtos/brama.png', price: 10, size: ['2L'], description: 'Cerveja' },
     { id: 9, name: 'Heineken', img: 'assets/images-Produtos/heineken.png', price: 10, size: ['2L'], description: 'Cerveja' },
     { id: 10, name: 'Itaipava', img: 'assets/images-Produtos/itaipava.png', price: 10, size: ['2L'], description: 'Cerveja' },
-    { id: 11, name: 'Cliper', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limo' },
-    { id: 12, name: 'Cliper', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
-]
+    { id: 11, name: 'Cliper limão', img: 'assets/images-Produtos/cliper-limao2l.png', price: 10, size: ['2L'], description: 'Refrigerante Limo' },
+    { id: 12, name: 'Cliper guaraná', img: 'assets/images-Produtos/cliper-guarana-2l.png', price: 10, size: ['2L'], description: 'Refrigerante Guaraná' }
+];
 
 /*NESTA ÁREA EU ESTOU USANDO O FILTER PARA CRIAR UM NOVO ARRAY O FILTER TAMBÉM PRECISA DA CALBACK NESSE CASO É A FUNÇÃO QUE ESTÁ VERIFICANDO SE EM
 Mercadorias EXITE UM DETERMINADO NOME.
 O RETURN ESTÁ SENDO USADO PARA RETORNAR OS VALORES DA VARIÁVEL MERCADORIAS QUE NESSE CASO TEM VÁRIOS OBJETOS (VAI RETORNAR TODOS) PARA
 
 */
-
 let FilterProdutos = [];
-const input = document.querySelector('.div-input-menu input')
+const input = document.querySelector('.div-input-menu input');
 const produto = document.querySelector('.produto');
-const areaProduto = document.querySelector('.produto-area')
+const areaProduto = document.querySelector('.produto-area');
 const modal = document.querySelector('.window-area-produtos ');
 const fechar = document.querySelector('.cancela-modal');
 
@@ -90,7 +128,11 @@ function MostraProdutos() {
         clone.querySelector('.tamanho').innerHTML = item.size
         clone.querySelector('.valor').innerHTML = item.price.toFixed(2);
         areaProduto.appendChild(clone)
-        
+        if(FilterProdutos.length==1) {
+            
+           clone.style.marginLeft='50vw'
+           
+        }
 
         clone.addEventListener('click', (e) => {
             fechar.addEventListener('click', () => {
@@ -141,26 +183,19 @@ function MostraProdutos() {
 
 };
 
-const Vtela = window.addEventListener('resize',VerificaTela)
+
 input.addEventListener('input', MostraProdutos);
 
 
-function VerificaTela () {
-        var larguraTela = window.innerWidth;
-        if(larguraTela > 720) {
-            bLateral.classList.remove('open')
-            mnSanduIch.style.position = ''
-            mnSanduIch.style.right = '';
-            mnSanduIch.style.top = '';
-            mnSanduIch.innerHTML = '<div class="b--menu"></div> <div class="b--menu"></div> <div class="b--menu"></div>';
-        }
-}
+
+
+//FUNÇÃO PARA REMOVER OS CLONES DAS PESQUISAS APÓS LIMPAR O INPUT
 function LimpaTela() {
     document.querySelector('.produto-area').innerHTML = '';
 
 
-}
+};
 
-
+//CHAMANDO FUNÇÕES
 VerificaTela();
 MostraProdutos();
