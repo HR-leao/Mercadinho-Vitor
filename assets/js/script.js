@@ -78,9 +78,8 @@ function OpenCloseCart(a, b, c) {
 };
 
 
-//ADICIONANDO ITENS NO CARRINHO DE COMPRA
 
-let shoppingCart = [];
+
 
 //MERCADORIAS.JSON
 
@@ -176,8 +175,36 @@ function MostraProdutos() {
             }
            })
 
+            //ADICIONANDO ITENS NO CARRINHO DE COMPRA
+           
+            let addItem = document.querySelector('.add-modal-car')
+            let imgCart = document.querySelector('#img-cart img')
+            let precoCart = document.querySelector('#preco-cart')
+            let nomeProd = document.querySelector('#nome-pd-cart span')
+            let areacart = document.querySelector('#contlPdCart')
+            let modelo = document.querySelector('#model-item-card')
+            let carrinhoCompras = []
             
+            addItem.addEventListener('click',(e)=>{
+                
+                let item = {
+                    id:FilterProdutos[i].id,
+                    quantidade:contador,
+                    nome:FilterProdutos[i].name,
+                    preco:FilterProdutos[i].price
+                }
+                carrinhoCompras.push(item)
+              
+                atualizaCarrinho()
+            })
+            function atualizaCarrinho() {
+                
+            }
         });
+        
+        
+
+
     });
 
 
@@ -195,6 +222,8 @@ function LimpaTela() {
 
 
 };
+
+
 
 //CHAMANDO FUNÇÕES
 VerificaTela();

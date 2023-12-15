@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Playfair+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@0;1&family=PT+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
-
+*/
 * {
     margin: 0px;
     box-sizing: border-box;
@@ -104,13 +104,14 @@ address {
 .carrinhoMod {
     height: auto;
     width: 300px;
-    background-color: #A2A2E3;
+    background-color: #FFF;
     position: absolute;
     right: 1px;
     z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    box-shadow: 0px 0px 8px #000;
     display: none;
 }
 .carrinhoMod img {
@@ -151,6 +152,79 @@ address {
     display: flex;
     background-color: #3F3F94;
     align-items: flex-start;
+}
+#contlPdCart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+        
+}
+#model-item-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.button-cart-mn,
+.button-cart-ms {
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+
+.button-cart-ms {
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    cursor: pointer;
+
+}
+.button-cart-mn{
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    cursor: pointer;
+}
+
+.button-cart-ms:hover {
+    background-color: #00FF7F;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.button-cart-mn:hover {
+    background-color: #00FF7F;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.div-button-cart {
+    background-color: #eee;
+    display: flex;
+    width: 55px;
+    height: 20px;
+
+}
+.div-button-cart:not(:first-of-type){
+    margin-right: 3px;
+}
+#model-item-card:first-of-type {
+
+    border-top: 1px solid #CCC;
+    border-bottom: 1px solid#ccc;
+}
+#nome-pd-cart {
+    height: 20px;
+    text-align: start;
+    background-color: #fff;
+    margin-left: -22px;
+}
+#img-cart img{
+    width: 60px;
+    height: 65px;
 }
 
 
@@ -225,8 +299,7 @@ address {
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
-.button-modal-mn:hover {
+.button-modal-mn:hover{
     background-color: #00FF7F;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
