@@ -127,11 +127,6 @@ function MostraProdutos() {
         clone.querySelector('.tamanho').innerHTML = item.size
         clone.querySelector('.valor').innerHTML = item.price.toFixed(2);
         areaProduto.appendChild(clone)
-        if(FilterProdutos.length==1) {
-            
-           clone.style.marginLeft='50vw'
-           
-        }
 
         clone.addEventListener('click', (e) => {
             fechar.addEventListener('click', () => {
