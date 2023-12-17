@@ -152,26 +152,18 @@ function MostraProdutos() {
             
             const btMenosModal = document.querySelector('.button-modal-mn')
             const btMaisModal = document.querySelector('.button-modal-ms') 
-            
             btMenosModal.addEventListener('click', (e) => {
-                
                 if(btMenosModal && contador >1) {
                     qtProdutoSlide.innerHTML=contador-=1
-                    console.log(qtProdutoSlide)
                 }
-                
-
             })
            btMaisModal.addEventListener('click', (e)=>{
-            
             if(btMaisModal &&contador >=1){
                 qtProdutoSlide.innerHTML=contador+=1
-                console.log(qtProdutoSlide)
             }
            })
-
+            
             //ADICIONANDO ITENS NO CARRINHO DE COMPRA
-           
             let addItem = document.querySelector('.add-modal-car')
             let imgCart = document.querySelector('#img-cart img')
             let precoCart = document.querySelector('#preco-cart')
@@ -180,32 +172,28 @@ function MostraProdutos() {
             let modelo = document.querySelector('#model-item-card')
             let carrinhoCompras = []
             
-            addItem.addEventListener('click',(e)=>{
-                
-                let item = {
-                    id:FilterProdutos[i].id,
-                    quantidade:contador,
-                    nome:FilterProdutos[i].name,
-                    preco:FilterProdutos[i].price
+
+            addItem.addEventListener('click',()=>{
+                if (addItem) {
+                    let cartItem = {
+                        contador: contador,
+                        name: item.name,
+                        price: item.price,
+                        img: item.img,
+                        description: item.description
+                    }
+                    console.log(cartItem)
                 }
-                carrinhoCompras.push(item)
-              
-                atualizaCarrinho()
             })
-            function atualizaCarrinho() {
-                
-            }
         });
         
-        
+
+
 
 
     });
 
-
 };
-
-
 input.addEventListener('input', MostraProdutos);
 
 
