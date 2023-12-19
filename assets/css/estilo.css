@@ -159,12 +159,14 @@ address {
     align-items: flex-start;
         
 }
+#contlPdCart ul li{
+    border: none;
+}
 #model-item-card{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
 }
 
 .button-cart-mn,

@@ -127,11 +127,10 @@ function MostraProdutos() {
         clone.querySelector('.tamanho').innerHTML = item.size
         clone.querySelector('.valor').innerHTML = item.price.toFixed(2);
         areaProduto.appendChild(clone)
-
         clone.addEventListener('click', (e) => {
             fechar.addEventListener('click', () => {
                 modal.classList.remove('open')
-
+               //duplo click e executando aqui
             });
             if (modal) {
                 modal.classList.add('open')
@@ -162,35 +161,33 @@ function MostraProdutos() {
                 qtProdutoSlide.innerHTML=contador+=1
             }
            })
-            
-            //ADICIONANDO ITENS NO CARRINHO DE COMPRA
-            let addItem = document.querySelector('.add-modal-car')
-            let imgCart = document.querySelector('#img-cart img')
-            let precoCart = document.querySelector('#preco-cart')
-            let nomeProd = document.querySelector('#nome-pd-cart span')
-            let areacart = document.querySelector('#contlPdCart')
-            let modelo = document.querySelector('#model-item-card')
-            let carrinhoCompras = []
-            
 
-            addItem.addEventListener('click',()=>{
-                if (addItem) {
-                    let cartItem = {
-                        contador: contador,
-                        name: item.name,
-                        price: item.price,
-                        img: item.img,
-                        description: item.description
-                    }
-                    console.log(cartItem)
-                }
-            })
+
+
+          
+          
+           
         });
         
 
+        //ADICIONANDO ITENS NO CARRINHO DE COMPRA
 
 
+        let modelo = document.querySelector('#model-item-card')
+        let name = document.querySelector('#model-item-card .titulo')
+        let img = document.querySelector('#model-item-card img')
+        let quantidade = document.querySelector('#model-item-card .qtcart')
+        let carrinhoCompras = []
 
+        let addItem = document.querySelector('.add-modal-car')
+        addItem.addEventListener('click', (e) => {
+
+
+        //SEM SOLUÇÃO AINDA
+        
+
+
+        })
     });
 
 };
@@ -211,3 +208,6 @@ function LimpaTela() {
 //CHAMANDO FUNÇÕES
 VerificaTela();
 MostraProdutos();
+
+
+
